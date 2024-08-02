@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(90deg, #13171b, #0a1649);
+}
+.title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+    animation: flipTitle 2s ease;
+}
+@keyframes flipTitle {
+    from {
+        transform: rotateX(90deg);
+    }
+    to {
+        transform: rotateX(0deg);
+    }
+}
+.containerInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.containerInput input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #fff;
+  outline: none;
+  margin-right: 8px;
+}
+.containerInput input::placeholder {
+  color: #fff;
+}
+
+.buttonSearch {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.5s;
+}
+.buttonSearch:hover {
+  transform: scale(1.2);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  width: 400px;
+  border-radius: 8px;
+}
+.main h2 {
+  font-size: 39px;
+  color: #000;
+  margin: 16px 0;
+}
+.main span {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+@media(max-width: 600px) {
+  .main {
+    width: 80%;
+  }
+  .title{
+    font-size: 2rem;
+  }
+  .main h2 {
+    font-size: 28px;
+    min-height: 250px;
+  }
+
+}
